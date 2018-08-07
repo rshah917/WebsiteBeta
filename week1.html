@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <title>Fortnite Battle Pass Challenges</title>
+        <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <style>
+    .accordion {
+    background-color:rgb(56, 89, 158);
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 18px;
+    width: 25em;
+    border: rgb(34, 56, 108) 0.1em solid;;
+    text-align: left;
+    outline: none;
+    font-size: 30px;
+    transition: 0.4s;
+    font-family: tahoma;
+}
+
+.active, .accordion:hover {
+    background-color: rgb(1, 31, 87);
+}
+
+.panel {
+    width: 25em;
+    padding: 0 0px;
+    background-color: rgb(56, 89, 158);
+    border: rgb(1, 31, 87);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 30px;
+}
+        body {
+          background: #171b21;
+          color: white;
+        }
+        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: fantasy; color: white;font-size: 300%}
+        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+        ul.home{
+            list-style: none; text-align: center; width: 100%;
+        }
+
+        .home li{
+            float:left; width: 25%; margin-left: 55px; 
+        }
+
+        .home a, .home a:visited{
+            text-decoration: none; color:  #235fd3; font-family: fantasy;  font-size: 100%;
+        }
+        
+        .home a:hover, .home a:focus, .home a:active{
+            text-decoration: none; color: lightslategray;
+        }
+
+        ul.chal li/*, ul.chal li a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus  */{
+         display:block;
+            padding: .5em .5em;
+            margin: 0 0.5em;
+            text-decoration: none;
+            font-size: 30px;
+            width: 25em;
+            height: 2em;
+            border: rgb(34, 56, 108) 0.1em solid;
+            font-family: tahoma;
+        } 
+        
+        ul.chal li a, ul.chal li a:visited {
+            color: white;
+        }
+
+        ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
+            background: rgb(56, 89, 158);
+            color: whitesmoke;
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+        display:none;
+        }
+
+        /*Hide decripion*/
+    input[type=checkbox]{
+        display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+    input[type-checkbox]:checked ~ #w1-1{
+        display:block;
+    } 
+       
+        </style>
+    </head>
+    <body>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Week 1 </h2>
+        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Pass</h3>
+        <ul class="chal">
+        <li> Deal SMG Damage to Opponenents (0/500)</li>
+        <li> Search a Supply Llama </li>
+        <li> Clinger, Stinkbomb, or Gernade Eliminations (0/3) (HARD) </li>
+        <h4> Battle Pass</h4>
+        <li> Search Chests in Snobby Shores (0/7) </li>
+        <li> Search Floating Lightning Bolts (0/7)</li>
+        <li> Follow the Treasure Map found in Risky Reels (HARD) </li>
+        <li> Eliminate Opponenents in Retail Row (0/3) (HARD) </li>
+        </ul>
+
+        <!-- TEST for Colabsable Lists-->
+        <h3> Free Pass</h3>
+        <button class="accordion">Deal SMG Damage to Opponenents (0/500)</button>
+        <div class="panel">
+            <img src="1.png"/>
+          <p>Find in Flush factory 1,12</p>
+        </div>
+        
+        <button class="accordion">Search a Supply Llama</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        
+        <button class="accordion">Clinger, Stinkbomb, or Gernade Eliminations (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <h4> Battle Pass</h4>
+        <button class="accordion">Search Chests in Snobby Shores (0/7)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Search Floating Lightning Bolts (0/7)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Follow the Treasure Map found in Risky Reels (HARD) </button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Eliminate Opponenents in Retail Row (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
+    </body>
+</html>
