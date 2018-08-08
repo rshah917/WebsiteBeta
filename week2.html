@@ -3,16 +3,45 @@
         <head>
         <title>Fortnite Battle Pass Challenges</title>
         <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC|Coda:800|Raleway:500" rel="stylesheet">
         <style>
+        .accordion {
+            background-color:rgb(56, 89, 158);
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 18px;
+            width: 25em;
+            border: rgb(34, 56, 108) 0.1em solid;;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+            font-family: 'Raleway', sans-serif;
+}
+
+        .active, .accordion:hover {
+            background-color: rgb(1, 31, 87);
+}
+
+        .panel {
+            width: 25em;
+            padding: 0 0px;
+            background-color: rgb(56, 89, 158);
+            border: rgb(1, 31, 87);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 30px;
+}
         body {
           background: #171b21;
           color: white;
         }
-        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
-        h1 {font-family: fantasy; color: white;font-size: 300%}
-        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
-        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
-        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+        p {font-family: 'Raleway', sans-serif; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: 'Coda', sans-serif; white; font-size: 300%}
+        h2 {font-family: 'Coda', sans-serif; #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: 'Holtwood One SC', serif; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: 'Holtwood One SC', serif; color: #d4af0b; text-align:left; font-size: 200%;}
         ul.home{
             list-style: none; text-align: center; width: 100%;
         }
@@ -38,7 +67,7 @@
             width: 25em;
             height: 2em;
             border: rgb(34, 56, 108) 0.1em solid;
-            font-family: tahoma;
+            font-family: 'Raleway', sans-serif;
         } 
         
         ul.chal li a, ul.chal li a:visited {
@@ -48,26 +77,90 @@
         ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
             background: rgb(56, 89, 158);
             color: whitesmoke;
-        }   
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+            display:none;
+        }
+
+        /*Hide decripion*/
+        input[type=checkbox]{
+            display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+        input[type-checkbox]:checked ~ #w1-1{
+            display:block;
+    } 
        
         </style>
     </head>
     <body>
-
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Week 2</h2>
-        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Pass</h3>
-        <ul class="chal" >
-        <li> Deal damage with Assault Rifles to Opponents (0/1000)</li>
-        <li> Search 7 Ammo Boxes in a Single Match (0/7)</li>
-        <li> Eliminate Opponents in Paradise Palms (0/3) (HARD)</li>
-        <h4> Battle Pass</h4>
-        <li> Score a 3 Point Shot at Different Basketball Courts (0/5)</li>
-        <li> Search Chests in Loot Lake (0/7)</li>
-        <li> Search between an Oasis, Rock Archway, and Dinosaurs(HARD)</li>
-        <li> Sniper Rifle Eliminations (0/2) (HARD)</li>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Week 2 </h2>
+        <!-- TEST for Colabsable Lists-->
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free Pass</h3>
+        <button class="accordion">Deal damage with Assault Rifles to Opponents (0/1000)</button>
+        <div class="panel">
+            <img src="1.png"/>
+          <p>Find in Flush factory 1,12</p>
+        </div>
         
-        </ul>
+        <button class="accordion">Search 7 Ammo Boxes in a Single Match (0/7)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        
+        <button class="accordion">Eliminate Opponents in Paradise Palms (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battle Pass</h4>
+        <button class="accordion">Eliminate Opponents in Paradise Palms (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Search Chests in Loot Lake (0/7)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Search between an Oasis, Rock Archway, and Dinosaurs(HARD) </button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
+        <button class="accordion">Sniper Rifle Eliminations (0/2) (HARD)</button>
+        <div class="panel">
+          <p>
+          Descripion
+          </p>
+        </div>
 
-      <div>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
     </body>
 </html>
