@@ -3,16 +3,45 @@
         <head>
         <title>Fortnite Battle Pass Challenges</title>
         <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC|Coda:800|Raleway:500" rel="stylesheet">
         <style>
+        .accordion {
+            background-color:rgb(56, 89, 158);
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 18px;
+            width: 25em;
+            border: rgb(34, 56, 108) 0.1em solid;;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+            font-family: 'Raleway', sans-serif;
+}
+
+        .active, .accordion:hover {
+            background-color: rgb(1, 31, 87);
+}
+
+        .panel {
+            width: 25em;
+            padding: 0 0px;
+            background-color: rgb(56, 89, 158);
+            border: rgb(1, 31, 87);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 30px;
+}
         body {
           background: #171b21;
           color: white;
         }
-        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
-        h1 {font-family: fantasy; color: white;font-size: 300%}
-        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
-        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
-        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+        p {font-family: 'Raleway', sans-serif; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: 'Coda', sans-serif; color: white;font-size: 300%}
+        h2 {font-family: 'Coda', sans-serif; color: #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: 'Holtwood One SC', serif; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: 'Holtwood One SC', serif; color: #d4af0b; text-align:left; font-size: 200%;}
         ul.home{
             list-style: none; text-align: center; width: 100%;
         }
@@ -22,7 +51,7 @@
         }
 
         .home a, .home a:visited{
-            text-decoration: none; color:  #235fd3; font-family: fantasy;  font-size: 100%;
+            text-decoration: none; color:  #235fd3; font-family: 'Coda', sans-serif;  font-size: 100%;
         }
         
         .home a:hover, .home a:focus, .home a:active{
@@ -38,7 +67,7 @@
             width: 25em;
             height: 2em;
             border: rgb(34, 56, 108) 0.1em solid;
-            font-family: tahoma;
+            font-family: 'Raleway', sans-serif;
         } 
         
         ul.chal li a, ul.chal li a:visited {
@@ -48,23 +77,93 @@
         ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
             background: rgb(56, 89, 158);
             color: whitesmoke;
-        }   
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+            display:none;
+        }
+
+        /*Hide decripion*/
+        input[type=checkbox]{
+            display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+        input[type-checkbox]:checked ~ #w1-1{
+            display:block;
+    } 
        
         </style>
     </head>
     <body>
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Week 3</h2>
-        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Pass</h3>
-        <ul class="chal">
-        <li> Deal Damage to Opponenets in a Single Match (0/500)</li>
-        <li> Use a Launchpad</li>
-        <li> Follow the treasure map found in Flush Factory (HARD)</li>
-        <h4> Battle Pass</h4>
-        <li> Search Chests in Fatal Fields (0/7)</li>
-        <li> Shoot a Clay Pigeon at Different Locations (0/5)</li>
-        <li> Eliminate opponents in Haunted Hills (0/5)</li>
-        <li> Explosive Weapon Eliminations (0/3) (HARD)</li>
-        </ul>
-      <div>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Week 3 </h2>
+        <!-- TEST for Colabsable Lists-->
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free Pass</h3>
+        <button class="accordion">Deal Damage to Opponenets in a Single Match (0/500)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>Use high damage dealing weapons for this challange, such AR's, Shotguns, RPG's, Gernade Launchers, etc.</p>
+        </div>
+        
+        <button class="accordion">Use a Launchpad</button>
+        <div class="panel">
+          <p>
+          Launchpads are best found in 50 v 50. The inner final circle contains numerous supply drops, from which launch pads can be easily acquired. In a regular game mode, supply drops, llamas, and vending machines are the easiest way to do this challange.
+          </p>
+        </div>
+        
+        <button class="accordion">Follow the treasure map found in Flush Factory (HARD)</button>
+        <div class="panel">
+            <img src="week3find.PNG"/>
+          <p>
+          
+          </p>
+        </div>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battle Pass</h4>
+        <button class="accordion">Search Chests in Fatal Fields</button>
+        <div class="panel">
+            <img src="fatalfields.PNG"/>
+          <p>
+          Most chests are located inside of buildings, in the surrounding forests, and in side of small sheds/barns.
+          </p>
+        </div>
+        <button class="accordion">Shoot a Clay Pigeon at Different Locations (0/5)</button>
+        <div class="panel">
+          <p>
+          Various clay pigeons are located throughout the map. Activate the machine and fire at the disk like object it fires out.
+          </p>
+        </div>
+        <button class="accordion">Eliminate opponents in Haunted Hills (0/5)</button>
+        <div class="panel">
+            <img src="haunted.PNG"/>
+          <p>
+          Try to land first in order to pick up a weapon before your opponents and shoot them down before they can get one.
+          </p>
+        </div>
+        <button class="accordion">Explosive Weapon Eliminations (0/3) (HARD)</button>
+        <div class="panel">
+            <p>
+          Only RPG's or Gernade Launchers may be used in order to complete this challenge.
+          </p>
+        </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
     </body>
 </html>
