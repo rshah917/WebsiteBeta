@@ -3,16 +3,46 @@
         <head>
         <title>Fortnite Battle Pass Challenges</title>
         <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC|Coda:800|Raleway:500" rel="stylesheet">
         <style>
+        .accordion {
+            background-color:rgb(56, 89, 158);
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 18px;
+            width: 25em;
+            border: rgb(34, 56, 108) 0.1em solid;;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+            font-family: 'Raleway', sans-serif;
+}
+
+        .active, .accordion:hover {
+            background-color: rgb(1, 31, 87);
+}
+
+        .panel {
+            width: 25em;
+            padding: 0 0px;
+            background-color: rgb(56, 89, 158);
+            border: rgb(1, 31, 87);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 30px;
+}
         body {
           background: #171b21;
           color: white;
         }
-        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
-        h1 {font-family: fantasy; color: white;font-size: 300%}
-        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
-        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
-        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+
+        p {font-family: 'Raleway', sans-serif; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: 'Coda', sans-serif; color: white;font-size: 300%}
+        h2 {font-family: 'Coda', sans-serif; color: #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: 'Holtwood One SC'; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: 'Holtwood One SC'; color: #d4af0b; text-align:left; font-size: 200%;}
         ul.home{
             list-style: none; text-align: center; width: 100%;
         }
@@ -22,7 +52,7 @@
         }
 
         .home a, .home a:visited{
-            text-decoration: none; color:  #235fd3; font-family: fantasy;  font-size: 100%;
+            text-decoration: none; color:  #235fd3; font-family: 'Coda', sans-serif;  font-size: 100%;
         }
         
         .home a:hover, .home a:focus, .home a:active{
@@ -38,7 +68,7 @@
             width: 25em;
             height: 2em;
             border: rgb(34, 56, 108) 0.1em solid;
-            font-family: tahoma;
+            font-family: 'Raleway', sans-serif;
         } 
         
         ul.chal li a, ul.chal li a:visited {
@@ -48,25 +78,94 @@
         ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
             background: rgb(56, 89, 158);
             color: whitesmoke;
-        }   
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+            display:none;
+        }
+
+        /*Hide decripion*/
+        input[type=checkbox]{
+            display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+        input[type-checkbox]:checked ~ #w1-1{
+            display:block;
+    } 
        
         </style>
     </head>
     <body>
-        <div><h1 class="home"><a href="ZYDay4.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
-        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Week 4 </h2>
-        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Pass</h3>
-        <ul class="chal">
-        <li> Build Structures (0/250) </li>
-        <li> Jump through Flaming Hoops with a Shopping Cart or ATK (0/5) </li>
-        <li> Eliminate opponents in Dusty Divot (0/3) (HARD)</li>
-        <h4> Battle Pass</h4>
-        <li> Deal damage with Siniper Rifles to Opponenents (0/500) </li>
-        <li> Search Chesets in Flush Factory (0/7)</li>
-        <li> Search between a Gas Station, Soccer Pitch, and Stunt Mountain (HARD)</li>
-        <li> Pistol Eliminations (0/3) (HARD)</li>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Week 4 </h2>
+        <!-- TEST for Colabsable Lists-->
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free Pass</h3>
+        <button class="accordion">Build Structures (0/250)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>For this challange you will need 2,500 materials. This challange will be easily completed over 3-4 games withouut much effort, as long as you build in fights.</p>
+        </div>
+        
+        <button class="accordion">Jump through Flaming Hoops with a Shopping Cart or ATK (0/5)</button>
+        <div class="panel">
+          <p>
+          Using an ATK or Shopping Cart, you must drive through the various fire hoops on the map. If using a shopping cart, it is easier to build up into the hoop, as the provided ramps usually only work with ATK's.
+          </p>
+        </div>
+        
+        <button class="accordion">Eliminate opponents in Dusty Divot (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+                Try to land first in order to pick up a weapon before your opponents and shoot them down before they can get one.
+          </p>
+        </div>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battle Pass</h4>
+        <button class="accordion">Deal damage with Siniper Rifles to Opponenents (0/500)</button>
+        <div class="panel">
+            <img src="huntingrifle.PNG"/>
+            <img src="SemiAuto.PNG"/>
+          <p>
+          When using a sniper rifle, dealing headshots do insane amounts of damage.
+          </p>
+        </div>
+        <button class="accordion">Search Chests in Flush Factory (0/7)</button>
+        <div class="panel">
+            <img src="flush.PNG"/>
+          <p>
+          
+          </p>
+        </div>
+        <button class="accordion">Search between a Gas Station, Soccer Pitch, and Stunt Mountain (HARD)</button>
+        <div class="panel">
+            <img src="search4.PNG"
+          <p>
+            
+          </p>
+        </div>
+        <button class="accordion">Pistol Eliminations (0/3) (HARD)</button>
+        <div class="panel">
+          <p>
+          Silenced pistols deal the most damage, along with dual pistols.
+          </p>
+        </div>
 
-        </ul>
-      <div>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
     </body>
 </html>
