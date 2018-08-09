@@ -3,16 +3,45 @@
         <head>
         <title>Fortnite Battle Pass Challenges</title>
         <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC|Coda:800|Raleway:500" rel="stylesheet">
         <style>
+        .accordion {
+            background-color:rgb(56, 89, 158);
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 18px;
+            width: 25em;
+            border: rgb(34, 56, 108) 0.1em solid;;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+            font-family: 'Raleway', sans-serif;
+}
+
+        .active, .accordion:hover {
+            background-color: rgb(1, 31, 87);
+}
+
+        .panel {
+            width: 25em;
+            padding: 0 0px;
+            background-color: rgb(56, 89, 158);
+            border: rgb(1, 31, 87);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 30px;
+}
         body {
           background: #171b21;
           color: white;
         }
-        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
-        h1 {font-family: fantasy; color: white;font-size: 300%}
-        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
-        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
-        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+        p {font-family: 'Raleway', sans-serif; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: 'Coda', sans-serif; color: white;font-size: 300%}
+        h2 {font-family: 'Coda', sans-serif; color: #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: 'Holtwood One SC'; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: 'Holtwood One SC'; color: #d4af0b; text-align:left; font-size: 200%;}
         ul.home{
             list-style: none; text-align: center; width: 100%;
         }
@@ -22,7 +51,7 @@
         }
 
         .home a, .home a:visited{
-            text-decoration: none; color:  #235fd3; font-family: fantasy;  font-size: 100%;
+            text-decoration: none; color:  #235fd3; font-family: 'Coda', sans-serif;  font-size: 100%;
         }
         
         .home a:hover, .home a:focus, .home a:active{
@@ -38,7 +67,7 @@
             width: 25em;
             height: 2em;
             border: rgb(34, 56, 108) 0.1em solid;
-            font-family: tahoma;
+            font-family: 'Raleway', sans-serif;
         } 
         
         ul.chal li a, ul.chal li a:visited {
@@ -48,27 +77,96 @@
         ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
             background: rgb(56, 89, 158);
             color: whitesmoke;
-        }   
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+            display:none;
+        }
+
+        /*Hide decripion*/
+        input[type=checkbox]{
+            display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+        input[type-checkbox]:checked ~ #w1-1{
+            display:block;
+    } 
        
         </style>
     </head>
     <body>
-
-    </ul>
-
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Week 5</h2>
-        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Pass</h3>
-        <ul class="chal" >
-        <li> Search Chests in Junk Junction (0/7)</li>
-        <li> Use Rift Portals (0/3)</li>
-        <li> Eliminate Opponents (0/3) (HARD)</li>
-        <h4> Battle Pass</h4>
-        <li> Deal Damage to Players with Clinger, Stink Bomb, or Gernade (0/300)</li>
-        <li> Hit a Golf Ball from Tee to Green on Different Holes (0/5)</li>
-        <li> Follow the Treasure Map found in Greasy Grove (HARD)</li>
-        <li> Eliminate Opponents in Shifty Shafts (0/3) (HARD)</li>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Week 5 </h2>
+        <!-- TEST for Colabsable Lists-->
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free Pass</h3>
+        <button class="accordion">Search Chests in Junk Junction (0/7)</button>
+        <div class="panel">
+            <img src="Junk.PNG"/>
+          <p>Open 7 Chests in Junk Junction</p>
+        </div>
         
-        </ul>
-      <div>
+        <button class="accordion">Use Rift Portals (0/3)</button>
+        <div class="panel">
+          <img src=""/>
+            <p>
+          Use 3 rift portals throughyout the fortnite map to complete this challenge
+          </p>
+        </div>
+        
+        <button class="accordion">Eliminate Opponents (0/3)</button>
+        <div class="panel">
+            <img= src""/>"
+          <p>
+          Eliminate 3 Opponents
+          </p>
+        </div>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battle Pass</h4>
+        <button class="accordion">Deal Damage to Players with Clinger, Stink Bomb, or Gernade (0/300)</button>
+        <div class="panel">
+            <img src="Clinger.PNG"/>
+            <img src="Stinkbomb.PNG"/> 
+          <p>
+          Deal Damage to opponents using clingers, stink bombs, and grenades
+          </p>
+        </div>
+        <button class="accordion">Hit a Hole in One from diferent Tees (0/5)</button>
+        <div class="panel">
+            <img src="Lazy.PNG"/>
+          <p>
+          Drop in Lazy Links to Compete this Challenge
+          </p>
+        </div>
+        <button class="accordion">Follow the Treasure Map found in Greasy Grove (HARD)</button>
+        <div class="panel">
+          <p>
+          Go to this location to find your secret battle star!
+          </p>
+        </div>
+        <button class="accordion">Eliminate Opponents in Shifty Shafts (0/3) (HARD)</button>
+        <div class="panel">
+            <img src="Shifty.PNG"/>
+          <p>
+          The best way to complete this challenge is to be the first to land and grab a weapon
+          </p>
+        </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
     </body>
 </html>
