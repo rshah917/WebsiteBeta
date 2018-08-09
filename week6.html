@@ -3,16 +3,45 @@
         <head>
         <title>Fortnite Battle Pass Challenges</title>
         <link rel="stylesheet" href="style.css" type="type/css" media="screen" />
+        <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC|Coda:800|Raleway:500" rel="stylesheet">
         <style>
+        .accordion {
+            background-color:rgb(56, 89, 158);
+            color: whitesmoke;
+            cursor: pointer;
+            padding: 18px;
+            width: 25em;
+            border: rgb(34, 56, 108) 0.1em solid;;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+            font-family: 'Raleway', sans-serif;
+}
+
+        .active, .accordion:hover {
+            background-color: rgb(1, 31, 87);
+}
+
+        .panel {
+            width: 25em;
+            padding: 0 0px;
+            background-color: rgb(56, 89, 158);
+            border: rgb(1, 31, 87);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            font-size: 30px;
+}
         body {
           background: #171b21;
           color: white;
         }
-        p {font-family: tahoma; color: white; text-align: center; font-size: 16px; font-weight: bold;}
-        h1 {font-family: fantasy; color: white;font-size: 300%}
-        h2 {font-family: Impact; color: #235fd3; text-align:left; font-size: 260%;}
-        h3 {font-family: Impact; color: #5c5d5f; text-align:left; font-size: 200%;}
-        h4 {font-family: Impact; color: #d4af0b; text-align:left; font-size: 200%;}
+        p {font-family: 'Raleway', sans-serif; color: white; text-align: center; font-size: 16px; font-weight: bold;}
+        h1 {font-family: 'Coda', sans-serif; color: white;font-size: 300%}
+        h2 {font-family: 'Coda', sans-serif; color: #235fd3; text-align:left; font-size: 260%;}
+        h3 {font-family: 'Holtwood One SC'; color: #5c5d5f; text-align:left; font-size: 200%;}
+        h4 {font-family: 'Holtwood One SC'; color: #d4af0b; text-align:left; font-size: 200%;}
         ul.home{
             list-style: none; text-align: center; width: 100%;
         }
@@ -22,7 +51,7 @@
         }
 
         .home a, .home a:visited{
-            text-decoration: none; color:  #235fd3; font-family: fantasy;  font-size: 100%;
+            text-decoration: none; color:  #235fd3; font-family: 'Coda', sans-serif;  font-size: 100%;
         }
         
         .home a:hover, .home a:focus, .home a:active{
@@ -38,7 +67,7 @@
             width: 25em;
             height: 2em;
             border: rgb(34, 56, 108) 0.1em solid;
-            font-family: tahoma;
+            font-family: 'Raleway', sans-serif;
         } 
         
         ul.chal li a, ul.chal li a:visited {
@@ -48,23 +77,96 @@
         ul.chal li/* a:visited, ul.chal a:active, ul.chal li a:hover, ul.chal li a:focus */ {
             background: rgb(56, 89, 158);
             color: whitesmoke;
-        }   
+        } 
+        
+        /*Style show dec button*/
+        .show-dec{
+            display:none;
+        }
+
+        /*Hide decripion*/
+        input[type=checkbox]{
+            display:none;
+    } 
+
+        /* Show descripion when invisble checkbox is checked*/
+        input[type-checkbox]:checked ~ #w1-1{
+            display:block;
+    } 
        
         </style>
     </head>
     <body>
-        <ul class="chal">
-        <h2>Week 6</h2>
-        <h3>Free Pass</h3>
-        <li> Deal Damage to Opponent Structures with Remote Explosives (0/5000)</li>
-        <li> Harvest Building Reasources with a Pickaxe (0/3000)</li>
-        <li> Search Between a Playground, Campsite, and a Footprint (HARD)</li>
-        <h4> Battle Pass</h4>
-        <li> Search Chests in Lonely Lodge (0/7)</li>
-        <li> Complete Timed Trials (0/5)</li>
-        <li> Minigun or LMG Eliminations (0/2) (HARD)</li>
-        <li> Eliminate Opponents in Tilted Towers (0/3) (HARD)</li>
-        </ul>
-    <div>
+        <div><h1 class="home"><a href="index.html">&nbsp;&nbsp; Fortnite Weekly Challenges</a></h1></div>
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Week 6 </h2>
+        <!-- TEST for Colabsable Lists-->
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free Pass</h3>
+        <button class="accordion">Deal Damage to Opponent Structures with Remote Explosives (0/5000)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>Pick up C4 at the begining of the game and hold on to it</p>
+        </div>
+        
+        <button class="accordion">Harvest Building Reasources with a Pickaxe (0/3000)</button>
+        <div class="panel">
+            <img src="Pick.PNG"
+          <p>
+          Land in Dusty Divot or Wailing Woods and break trees to easily complete this challenge.
+          </p>
+        </div>
+        
+        <button class="accordion">Search Between a Playground, Campsite, and a Footprint (HARD)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>
+          Land Here To Find your secret battle star!
+          </p>
+        </div>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Battle Pass</h4>
+        <button class="accordion">Search Chests in Lonely Lodge (0/7)</button>
+        <div class="panel">
+            <img src="Lonely.PNG"/>
+          <p>
+          Land in Lonely Lodge and Find and open 7 chests
+          </p>
+        </div>
+        <button class="accordion">Complete Timed Trials (0/5)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>
+          Land In the race track and grab an atk and drive around the course.
+          </p>
+        </div>
+        <button class="accordion">Minigun or LMG Eliminations (0/2) (HARD)</button>
+        <div class="panel">
+            <img src=""/>
+          <p>
+          The best way to do this is in Squads or 50 vs 50 and finnish a person you downed with the weapon
+          </p>
+        </div>
+        <button class="accordion">Eliminate Opponents in Tilted Towers (0/3) (HARD)</button>
+        <div class="panel">
+            <img src="Tilted.PNG"/>
+          <p>
+          Be the first to grab a gun in Tilted Towers and try to get an elimination.
+          </p>
+        </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+        });
+    }
+    </script>
     </body>
 </html>
